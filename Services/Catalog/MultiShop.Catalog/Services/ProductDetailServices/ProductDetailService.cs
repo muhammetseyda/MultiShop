@@ -2,7 +2,7 @@
 using MongoDB.Driver;
 using MultiShop.Catalog.Dtos.ProductDetailDtos;
 using MultiShop.Catalog.Entities;
-using MultiShop.Catalog.Services.ProductDetailDetailServices;
+using MultiShop.Catalog.Services.ProductDetailServices;
 using MultiShop.Catalog.Settings;
 
 namespace MultiShop.Catalog.Services.ProductDetailServices
@@ -26,7 +26,7 @@ namespace MultiShop.Catalog.Services.ProductDetailServices
 
         public async Task DeleteProductDetailAsync(string id)
         {
-            await _productDetailCollection.DeleteOneAsync(x => x.ProductId == id);
+            await _productDetailCollection.DeleteOneAsync(x => x.ProductDetailId == id);
         }
 
         public async Task<List<ResultProductDetailDto>> GetAllProductDetailsAsync()
@@ -37,7 +37,7 @@ namespace MultiShop.Catalog.Services.ProductDetailServices
 
         public async Task<GetByIdProductDetailDto> GetByIdProductDetailDtoAsync(string id)
         {
-            var values = await _productDetailCollection.Find(x => x.ProductId == id).FirstOrDefaultAsync();
+            var values = await _productDetailCollection.Find(x => x.ProductDetailId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdProductDetailDto>(values);
         }
 
