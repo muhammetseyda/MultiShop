@@ -12,6 +12,7 @@ namespace MultiShop.Catalog.Entities
         public string ProductImage2 { get; set; }
         public string ProductImage3 { get; set; }
         public string ProductId { get; set; }
+        [BsonIgnore]
         public Product Product { get; set; }
     }
 }
