@@ -16,7 +16,8 @@ namespace MultiShop.Discount.Context
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=192.168.100.40;Initial Catalog=Muhammet;User Id=MuhammedArmagan;Password=MuAr*1990;Connect Timeout=30000;");
+            //optionsBuilder.UseSqlServer("Data Source=192.168.100.40;Initial Catalog=Muhammet;User Id=MuhammedArmagan;Password=MuAr*1990;Connect Timeout=30000;");
+            optionsBuilder.UseSqlServer("Data Source=MSA;database=MultiShopDb;Integrated Security=True;TrustServerCertificate=True;");
         }
         public DbSet<Coupon> Coupons { get; set; }
         public IDbConnection CreateConnection() => new SqlConnection(_connectionString);

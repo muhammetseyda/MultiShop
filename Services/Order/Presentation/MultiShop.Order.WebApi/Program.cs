@@ -1,10 +1,6 @@
-using MultiShop.Discount.Context;
-using MultiShop.Discount.Services;
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddTransient<DapperContext>();
-builder.Services.AddScoped<IDiscountService, DiscountService>();
+// Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
