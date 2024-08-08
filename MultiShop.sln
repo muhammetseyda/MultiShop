@@ -37,6 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirement
 	ProjectSection(SolutionItems) = preProject
 		IdentityServerVersionErrorSolution.txt = IdentityServerVersionErrorSolution.txt
 		PortainerCmd.txt = PortainerCmd.txt
+		PortNumber.txt = PortNumber.txt
 	EndProjectSection
 EndProject
 Global
